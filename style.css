@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: white;
+    transition: all .4s;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dark_mode {
+    background-color: #201e35;
+    transition: all .4s;
+}
+#btn{
+    display: none;
+}
+
+.sun{
+    color:#201e35;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all .4s;
+    transform: translate(0,0) rotate(0deg);
+}
+.moon{
+    color: #fff;
+    position: absolute;
+    font-size: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .4s;
+    transform: translate(-25px,-40px) rotate(-100deg);
+}
+#btn:checked ~ .moon{
+    opacity: 1;
+    transform: translate(0,0) rotate(0deg);
+}
+#btn:checked ~ .sun{
+    opacity: 0;
+    transform: translate(-25px,40px) rotate(100deg);
+}
